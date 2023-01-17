@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --roxo: rgba(134, 79, 148, 0.966);
+    --roxo-claro: rgb(204, 168, 212);
+    --off-white: #e5e5e5;
+    --transparente-branco-1: rgba(255, 255, 255, 0.25);
+    --transparente-branco-2: rgba(255, 255, 255, 0.1);
+    --sombra: rgba(3, 46, 87, 0.2);
+}
+
+body {
+    background-image: url(./assets/clouds.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.fundo-transparente {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    max-width: 35rem;
+}
+
+.container {
+    width: 100%;
+    background: var(--roxo);
+    backdrop-filter: blur(50px);
+    padding: 3rem 1.8rem;
+    border: 2px solid var(--transparente-branco-2);
+    border-radius: 1.6rem;
+    text-align: center;
+    box-shadow: 1px 1px 1px 2px var(--transparente-branco-2);
+}
+
+/*-------form--------*/
+
+form {
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    gap: 1.25rem;
+}
+
+#input-lugar {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgba(0, 0, 0, 0.829);
+    font-size: 1.5rem;
+    font-weight: lighter;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--roxo-claro);
+    border-radius: 0.3rem;
+}
+
+#input-lugar::placeholder {
+    color: var(--roxo-claro);
+    letter-spacing: 0.2rem;
+}
+
+#btn-buscar {
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    color: var(--roxo);
+    background-color: var(--roxo-claro);
+    cursor: pointer;
+}
+
+/*-------Clima--------*/
+
+.dados-weather {
+    display: none;
+    margin: 1.5rem 0;
+}
+
+.dados-weather h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+.dados-weather h2 #cidade {
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+
+.dados-weather h2 i {
+    font-size: 1rem;
+}
+
+.temperatura {
+    margin-top: 2rem;
+}
+
+.temperatura .temp {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.temperatura .grau {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.dados-weather span {
+    margin: 0.6rem;
+    font-size: 1.2rem;
+}
+
+#country {
+    width: 15px;
+}
+
+.descrição-container{
+    margin-top: 0.6rem;
+    text-align: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.detalhes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: var(--transparente-branco-1);
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.detalhes-container .umidade {
+    border-right: 2px solid var(--roxo-claro);
+    margin: .6rem;
+    padding: .6rem;
+}
+
+.temperatura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tempC {
+    display: none;
+
+}
+
+.tempF {
+    display: none;
+}
+
+.grauC {
+    background: none;
+    border: none;
+    font-weight: bold;
+    border-right: 1px solid black;
+    padding-right: .5rem;
+    cursor: pointer;
+}
+
+.grauF {
+    background: none;
+    border: none;
+    font-weight: bold;
+    padding-left: .5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media (max-width: 390px) {
+    .fundo-transparente {
+        width: 80vw;
+        max-width: 30rem;
+    }
+}
+
+@media (max-width: 360px) {
+    form {
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 1rem;
+    }
+    
+    #input-lugar {
+        width: 100%;
+        margin: auto;
+    }
+   
+    #btn-buscar {
+        width: 100%;
+        margin: auto;
+    }
+
+    .detalhes-container {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
