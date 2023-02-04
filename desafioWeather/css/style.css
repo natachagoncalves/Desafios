@@ -37,13 +37,13 @@ body {
 
 .container {
     width: 100%;
-    background: var(--roxo);
+    background: rgba(248, 238, 250, 0.966);
     backdrop-filter: blur(50px);
     padding: 3rem 1.8rem;
     border: 2px solid var(--transparente-branco-2);
     border-radius: 1.6rem;
     text-align: center;
-    box-shadow: 1px 1px 1px 2px var(--transparente-branco-2);
+    box-shadow: 1px 1px 20px 1px var(--roxo);
 }
 
 /*-------form--------*/
@@ -58,9 +58,9 @@ form {
     background-color: transparent;
     border: none;
     outline: none;
-    color: rgba(0, 0, 0, 0.829);
-    font-size: 1.5rem;
-    font-weight: lighter;
+    color: var(--roxo);
+    font-size: 1.7rem;
+    font-weight: bold;
     padding: 0.5rem;
     border-bottom: 2px solid var(--roxo-claro);
     border-radius: 0.3rem;
@@ -82,6 +82,13 @@ form {
     cursor: pointer;
 }
 
+.span-requirid {
+    text-align: start;
+    margin: -8px 0 0 4px;
+    font-size: 1.3rem;
+    color: #8d0f0f;
+    display: none;
+}
 /*-------Clima--------*/
 
 .dados-weather {
@@ -125,6 +132,13 @@ form {
     font-size: 1.2rem;
 }
 
+#icon-weather {
+    background-image: linear-gradient(rgba(234, 214, 240, 0.966), rgba(230, 192, 240, 0.966));
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1.0rem;
+}
+
 #country {
     width: 15px;
 }
@@ -141,7 +155,7 @@ form {
     justify-content: center;
     align-items: center;
     margin: auto;
-    background-color: var(--transparente-branco-1);
+    background-image: linear-gradient(rgba(240, 219, 245, 0.966), rgba(217, 179, 226, 0.966));
     width: 50%;
     margin-top: 2rem;
 }
@@ -160,7 +174,6 @@ form {
 
 .tempC {
     display: none;
-
 }
 
 .tempF {
@@ -183,9 +196,6 @@ form {
     padding-left: .5rem;
     cursor: pointer;
 }
-
-
-
 
 
 

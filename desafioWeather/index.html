@@ -17,11 +17,12 @@
     <main>
         <div class="fundo-transparente">
             <div class="container">
-                <form>
-                    <input type="text" id="input-lugar" placeholder="Digite o lugar">
+                <form id="form">
+                    <input type="text" id="input-lugar" placeholder="Digite o lugar" class="input required">
                     <button id="btn-buscar">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
+                    <span class="span-requirid">O campo deve ser preenchido!</span>
                 </form>
                 <div class="dados-weather">
                     <h2>
@@ -37,8 +38,8 @@
                         <button class="grauF">&deg;F</button>
                     </div>
                     <div class="descrição-container">
-                        <p class="descrição"></p>
                         <img src="" alt="condições do tempo" id="icon-weather">
+                        <p class="descrição"></p>
                     </div>
                     <div class="detalhes-container">
                         <p class="umidade">
